@@ -1,0 +1,30 @@
+{
+  "name": "spotify-player",
+  "description": "Realtime spotify player",
+  "version": "0.1.0",
+  "author": "Davey",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "d3": "^7.1.1",
+    "jquery": "^3.4.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-scripts": "2.1.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

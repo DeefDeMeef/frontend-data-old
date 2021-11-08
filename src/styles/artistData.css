@@ -1,0 +1,73 @@
+span.bold {
+  font-weight: bold;
+}
+
+.artist-wrapper {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section.artist-block {
+  width: 30%;
+  /* height: 40vh; */
+  background-color: #f8f8f8;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.artist-data {
+  display: flex;
+  flex-direction: row;
+}
+
+.artist-data > div {
+  padding: 0 1em;
+}
+
+.popularity-bar {
+  height: 1em;
+  width: 100%;
+  background-color: lightgrey;
+  border-radius: 1em;
+  border: 1px solid #191414;
+}
+
+.popularity-bar-inner {
+  height: 1em;
+  border-radius: 1em;
+  background-color: #1db954;
+}
+
+section.related-artist-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 1em;
+}
+
+section.related-artist-wrapper > article {
+  background-color: #f8f8f8;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 1em;
+  width: auto;
+}
+
+.btn-small {
+  background-color: transparent;
+  border-radius: 2em;
+  border: 1px solid #1db954;
+  color: #1db954;
+  cursor: pointer;
+  font-size: 2vmin;
+  padding: 0.7em 1.5em;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-small:hover {
+  background: #1db954;
+  color: #191414;
+}
