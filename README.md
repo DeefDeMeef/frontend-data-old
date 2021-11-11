@@ -1,4 +1,4 @@
-#Functional Programming
+# Frontend Data
 
 ## Getting started: Installation ##
 Om de applicatie te laten functioneren dienen er een paar stappen uitgevoerd te worden.
@@ -55,6 +55,8 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 
 ```
+
+### Spotify Developer Dashboard
 
 ### Einde installatie
 Yes! Het is je hopelijk gelukt. Wanneer je nu de command `npm start` uitvoerd in de terminal en vervolgens naar de link gaat die de terminal geeft zie je het dashbard verschijnen in je browser.
