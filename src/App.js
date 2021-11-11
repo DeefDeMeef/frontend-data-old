@@ -82,6 +82,11 @@ const App = () => {
       }
 
       if (state.artist) {
+        const topTracks = await spotifyProvider.getUserTopPicks(hash.access_token);
+        state.top = topTracks;
+      }
+
+      if (state.artist) {
         const audio = await spotifyProvider.getAudioData(hash.access_token, state.player.item.id);
         state.audio = audio;
       }
@@ -94,6 +99,8 @@ const App = () => {
       setLoading(false);
     }
   };
+
+  console.log(state);
 
   return (
     <>
