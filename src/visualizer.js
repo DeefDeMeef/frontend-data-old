@@ -1,9 +1,9 @@
 import React from "react";
 import * as d3 from "d3";
 
-const Visualizer = (props) => {
-  // console.log(props.data);
+import cleanDataFunctions from "./cleanDataFunctions";
 
+const Visualizer = (props) => {
   let duration = props.data.track.duration;
 
   let segments = props.data.segments.map((segment) => {
@@ -24,35 +24,44 @@ const Visualizer = (props) => {
     });
 
     let loudness = Math.round((s.loudness / max) * 100);
-    if (loudness === 0) loudness = 5;
 
-    levels.push(loudness);
+    levels.push({ loudness, fill: "green" });
   }
-
-  // console.log(levels.length);
 
   if (levels) {
     d3.select(".chart")
-      .selectAll("circle")
+      .selectAll("rect")
       .data(levels)
-      .join("circle")
-      .attr("cx", function (d, i) {
-        return i * 100;
+      .join("rect")
+      .attr("x", function (d, i) {
+        return i * 1.5;
       })
-      .attr("cy", 50)
-      .attr("r", function (d) {
-        return 0.5 * d;
+      .attr("y", function (d) {
+        let pos = d.loudness / 2;
+        return 100 - pos;
       })
-      .style("fill", "blue");
+      .transition()
+      .attr("height", function (d) {
+        return 0.5 * d.loudness;
+      })
+      .attr("width", function (d) {
+        return 0.75;
+      })
+      .style("fill", "#191414");
   }
 
+  let key = cleanDataFunctions.getKeyPitch(props.data.track);
+
   return (
-    <>
+    <section className="wave-section">
       <h1>Wave pattern</h1>
-      <svg width="4000" height="100">
-        <g className="chart" transform="translate(50, 0)"></g>
-      </svg>
-    </>
+      <div className="wave-container">
+        <svg height="100">
+          <g className="chart" transform="translate(0, 0)"></g>
+        </svg>
+      </div>
+      <p>Het nummer is in key: "{key.pitch}" gespeeld</p>
+    </section>
   );
 };
 

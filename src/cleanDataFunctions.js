@@ -37,6 +37,50 @@ class CleanDataFunctions {
     }
     return data;
   }
+
+  getKeyPitch(data) {
+    switch (data.key) {
+      case 0:
+        data.pitch = "C";
+        break;
+      case 1:
+        data.pitch = "C#";
+        break;
+      case 2:
+        data.pitch = "D";
+        break;
+      case 3:
+        data.pitch = "D#";
+        break;
+      case 4:
+        data.pitch = "E";
+        break;
+      case 5:
+        data.pitch = "F";
+        break;
+      case 6:
+        data.pitch = "F#";
+        break;
+      case 7:
+        data.pitch = "G";
+        break;
+      case 8:
+        data.pitch = "G#";
+        break;
+      case 9:
+        data.pitch = "A";
+        break;
+      case 10:
+        data.pitch = "A#";
+        break;
+      case 11:
+        data.pitch = "B";
+        break;
+      default:
+        data.pitch = "Geen key kunnen vinden";
+    }
+    return data;
+  }
 }
 
 export default new CleanDataFunctions();

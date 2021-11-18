@@ -66,6 +66,19 @@ class SpotifyProvider {
     if (response.ok) return response.json();
     else return null;
   }
+
+  async getAudioFeatures(token, trackId) {
+    let response = await fetch("https://api.spotify.com/v1/audio-features/" + trackId, {
+      method: "get",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+    });
+    if (response.ok) return response.json();
+    else return null;
+  }
 }
 
 export default new SpotifyProvider();

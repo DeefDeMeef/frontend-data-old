@@ -18,7 +18,7 @@ header {
 }
 
 .now-playing-img img {
-  width: 15vw;
+  width: 12.5vw;
   height: auto;
   border-radius: 10px;
 }
@@ -44,4 +44,39 @@ header {
   height: 7.5em;
   width: 7.5em;
   border-radius: 50%;
+}
+
+.wave-container {
+  width: 100%;
+  height: auto;
+  background-color: #f8f8f8;
+  border-radius: 1em;
+}
+
+.wave-container svg {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+
+.wave-container svg g rect {
+  display: flex;
+  align-items: center;
+}
+
+section.wave-section {
+  padding: 1em;
+}
+
+#BarChart {
+  display: flex;
+  flex-direction: row; /* Arrange the Bars Horizontally using FlexBox  */
+  align-items: flex-end; /* Have the bars start at the bottom and go up */
+  justify-content: center; /* Center the bars in the middle of the screen */
+  margin: 50px;
+}
+
+.bar {
+  background-color: #3aa70f; /* Have each bar be a nice green */
+  width: 10px; /* The animation will start with each bar being 10px wide, and then expand outwards */
 }
